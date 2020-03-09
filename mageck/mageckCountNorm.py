@@ -32,7 +32,9 @@ def mageckcount_getzerocounts(ctable):
   """
   Get the factor by median normalization
   """
+  # 病毒个数
   n=len(ctable[list(ctable.keys())[0]]) # samples
+  # 样本数量
   m=len(ctable) # sgRNAs
   #samplefactor=[0]*n
   zerofactor=[0]*n
@@ -63,7 +65,8 @@ def mageckcount_getmediannormfactor(ctable):
   return medianfactor
 
 
-
+# normalize  paper Figure 1 median normalization  adjust for the effect of library
+# sizes and read count distributions.
 def normalizeCounts(ctable,sgdict=None,method='median',returnfactor=False,reversefactor=False,controlsgfile=None,norm_msgs=None):
   """
   Central function for normalizing read counts

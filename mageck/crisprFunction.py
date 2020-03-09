@@ -241,6 +241,7 @@ def crispr_test(tab,ctrlg,testg,varg, destfile,sgrna2genelist,args):
   tabtreatmod={k:[v[i] for i in range(len(v)) if i in (testg)] for (k,v) in tab.items()}
   # training using control samples
   model1=modelmeanvar(tabctrlmod,method='linear')
+  # 求出线性关系参数 k b
   #model2=modelmeanvar(tabctrl,method='edger')
   model=[x for x in model1];#+[model2]
   #if type(model) is types.ListType:
@@ -607,6 +608,7 @@ def magecktest_main(args):
   warning_in_norm=False
   # stat test
   if args.subcmd == 'test':
+    # read count
     mapres=getcounttablefromfile(args.count_table)
   else:
     mapres=getcounttablefromfile(args.output_prefix+'.count.txt')
