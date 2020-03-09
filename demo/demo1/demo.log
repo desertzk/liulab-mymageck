@@ -1,0 +1,71 @@
+INFO  @ Sun, 08 Mar 2020 18:58:44: Parameters: /usr/bin/mageck test -k sample.txt -t HL60.final,KBM7.final -c HL60.initial,KBM7.initial -n demo 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Welcome to MAGeCK v0.5.9.2. Command: test 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Loading count table from sample.txt  
+INFO  @ Sun, 08 Mar 2020 18:58:44: Processing 1 lines.. 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Parsing error in line 1 (usually the header line). Skip this line. 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Loaded 999 records. 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Loading R template file: /usr/lib/python3.8/site-packages/mageck/plot_template.RTemplate. 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Loading R template file: /usr/lib/python3.8/site-packages/mageck/plot_template_indvgene.RTemplate. 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Loading Rnw template file: /usr/lib/python3.8/site-packages/mageck/plot_template.Rnw. 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Setting up the visualization module... 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Given sample labels: HL60.final,KBM7.final 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Converted index: 2 3 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Treatment samples:HL60.final,KBM7.final 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Treatment sample index:2,3 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Given sample labels: HL60.initial,KBM7.initial 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Converted index: 0 1 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Control samples:HL60.initial,KBM7.initial 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Control sample index:0,1 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Initial (total) size factor: 1.6666455325878438 2.027372749328462 0.7198064117880387 0.6589869375844738 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Median factor: 1.469870985815957 1.7759474888175155 0.6308897693810006 0.5721813161032618 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Final size factor: 1.469870985815957 1.7759474888175155 0.6308897693810006 0.5721813161032618 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Detecting outliers from variance estimation.. Avg read count:[723.9972950023187], Var: [255633.28060956916] 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Skipping 4 sgRNAs from variance calculation because of their extreme high counts (> 4* STD (mean counts) ). 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: Adjusted model: 1.0531637549870927	4.04934849354515 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Before RRA, 0 sgRNAs are removed with zero counts in both group(s). 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Use qnorm to reversely calculate sgRNA scores ... 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: lower test FDR cutoff: 0.3563563563563564 
+DEBUG @ Sun, 08 Mar 2020 18:58:44: higher test FDR cutoff: 0.36936936936936937 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Running command: RRA -i demo.plow.txt -o demo.gene.low.txt -p 0.3563563563563564 --skip-gene NA --skip-gene na  
+INFO  @ Sun, 08 Mar 2020 18:58:44: Command message: 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Welcome to RRA v 0.5.9. 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Skipping gene NA for permutation ... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Skipping gene na for permutation ... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Reading input file... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Summary: 999 sgRNAs, 100 genes, 1 lists; skipped sgRNAs:0 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Computing lo-values for each group... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Computing false discovery rate... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Increase the number of permutations to 1001 to get precise p values. To avoid this, use the --permutation option. 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Permuting genes with 9 sgRNAs... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Permuting genes with 10 sgRNAs... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Number of genes under FDR adjustment: 100 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   Saving to output file... 
+INFO  @ Sun, 08 Mar 2020 18:58:44:   RRA completed. 
+INFO  @ Sun, 08 Mar 2020 18:58:44:    
+INFO  @ Sun, 08 Mar 2020 18:58:44: End command message. 
+INFO  @ Sun, 08 Mar 2020 18:58:44: Running command: RRA -i demo.phigh.txt -o demo.gene.high.txt -p 0.36936936936936937 --skip-gene NA --skip-gene na  
+INFO  @ Sun, 08 Mar 2020 18:58:45: Command message: 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Welcome to RRA v 0.5.9. 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Skipping gene NA for permutation ... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Skipping gene na for permutation ... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Reading input file... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Summary: 999 sgRNAs, 100 genes, 1 lists; skipped sgRNAs:0 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Computing lo-values for each group... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Computing false discovery rate... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Increase the number of permutations to 1001 to get precise p values. To avoid this, use the --permutation option. 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Permuting genes with 9 sgRNAs... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Permuting genes with 10 sgRNAs... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Number of genes under FDR adjustment: 100 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   Saving to output file... 
+INFO  @ Sun, 08 Mar 2020 18:58:45:   RRA completed. 
+INFO  @ Sun, 08 Mar 2020 18:58:45:    
+INFO  @ Sun, 08 Mar 2020 18:58:45: End command message. 
+DEBUG @ Sun, 08 Mar 2020 18:58:45: Sorting the merged items by negative selection... 
+INFO  @ Sun, 08 Mar 2020 18:58:45: Loading top 10 genes from demo.gene.low.txt: ACTR8,ACIN1,AHCY,AATF,ABT1,ACLY,AHCTF1,AGBL5,ADIRF,ACTR3 
+DEBUG @ Sun, 08 Mar 2020 18:58:45: Column index:3 
+INFO  @ Sun, 08 Mar 2020 18:58:45: Loading top 10 genes from demo.gene.high.txt: ACRC,AGAP3,ADCK4,AHRR,ABCB8,ADNP,ADCK1,ADRBK1,AFF4,ADRA1A 
+DEBUG @ Sun, 08 Mar 2020 18:58:45: Column index:9 
+INFO  @ Sun, 08 Mar 2020 18:58:45: Running command: rm demo.plow.txt 
+INFO  @ Sun, 08 Mar 2020 18:58:45: Running command: rm demo.phigh.txt 
+INFO  @ Sun, 08 Mar 2020 18:58:45: Running command: rm demo.gene.low.txt 
+INFO  @ Sun, 08 Mar 2020 18:58:45: Running command: rm demo.gene.high.txt 

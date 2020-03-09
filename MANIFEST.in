@@ -1,0 +1,6 @@
+recursive-include rra *
+recursive-include gsea *
+recursive-include demo *
+include mageck/*.RTemplate
+include mageck/*.Rnw
+include mageck/*.txt
