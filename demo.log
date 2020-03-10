@@ -1,71 +1,19 @@
-INFO  @ Sun, 08 Mar 2020 19:00:14: Parameters: /home/zk/research/liulab-mageck-ef7c39474ed0/mageckmain.py test -k demo/demo1/sample.txt -t HL60.final,KBM7.final -c HL60.initial,KBM7.initial -n demo 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Welcome to MAGeCK v0.5.9.2. Command: test 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loading count table from demo/demo1/sample.txt  
-INFO  @ Sun, 08 Mar 2020 19:00:14: Processing 1 lines.. 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Parsing error in line 1 (usually the header line). Skip this line. 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loaded 999 records. 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loading R template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template.RTemplate. 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loading R template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template_indvgene.RTemplate. 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loading Rnw template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template.Rnw. 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Setting up the visualization module... 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Given sample labels: HL60.final,KBM7.final 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Converted index: 2 3 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Treatment samples:HL60.final,KBM7.final 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Treatment sample index:2,3 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Given sample labels: HL60.initial,KBM7.initial 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Converted index: 0 1 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Control samples:HL60.initial,KBM7.initial 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Control sample index:0,1 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Initial (total) size factor: 1.6666455325878438 2.027372749328462 0.7198064117880387 0.6589869375844738 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Median factor: 1.469870985815957 1.7759474888175155 0.6308897693810006 0.5721813161032618 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Final size factor: 1.469870985815957 1.7759474888175155 0.6308897693810006 0.5721813161032618 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Detecting outliers from variance estimation.. Avg read count:[723.9972950023187], Var: [255633.28060956916] 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Skipping 4 sgRNAs from variance calculation because of their extreme high counts (> 4* STD (mean counts) ). 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Adjusted model: 1.0531637549870927	4.04934849354515 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Before RRA, 0 sgRNAs are removed with zero counts in both group(s). 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Use qnorm to reversely calculate sgRNA scores ... 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: lower test FDR cutoff: 0.3563563563563564 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: higher test FDR cutoff: 0.36936936936936937 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Running command: RRA -i demo.plow.txt -o demo.gene.low.txt -p 0.3563563563563564 --skip-gene NA --skip-gene na  
-INFO  @ Sun, 08 Mar 2020 19:00:14: Command message: 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Welcome to RRA v 0.5.9. 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Skipping gene NA for permutation ... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Skipping gene na for permutation ... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Reading input file... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Summary: 999 sgRNAs, 100 genes, 1 lists; skipped sgRNAs:0 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Computing lo-values for each group... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Computing false discovery rate... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Increase the number of permutations to 1001 to get precise p values. To avoid this, use the --permutation option. 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Permuting genes with 9 sgRNAs... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Permuting genes with 10 sgRNAs... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Number of genes under FDR adjustment: 100 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Saving to output file... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   RRA completed. 
-INFO  @ Sun, 08 Mar 2020 19:00:14:    
-INFO  @ Sun, 08 Mar 2020 19:00:14: End command message. 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Running command: RRA -i demo.phigh.txt -o demo.gene.high.txt -p 0.36936936936936937 --skip-gene NA --skip-gene na  
-INFO  @ Sun, 08 Mar 2020 19:00:14: Command message: 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Welcome to RRA v 0.5.9. 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Skipping gene NA for permutation ... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Skipping gene na for permutation ... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Reading input file... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Summary: 999 sgRNAs, 100 genes, 1 lists; skipped sgRNAs:0 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Computing lo-values for each group... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Computing false discovery rate... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Increase the number of permutations to 1001 to get precise p values. To avoid this, use the --permutation option. 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Permuting genes with 9 sgRNAs... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Permuting genes with 10 sgRNAs... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Number of genes under FDR adjustment: 100 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   Saving to output file... 
-INFO  @ Sun, 08 Mar 2020 19:00:14:   RRA completed. 
-INFO  @ Sun, 08 Mar 2020 19:00:14:    
-INFO  @ Sun, 08 Mar 2020 19:00:14: End command message. 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Sorting the merged items by negative selection... 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loading top 10 genes from demo.gene.low.txt: ACTR8,ACIN1,AHCY,AATF,ABT1,ACLY,AHCTF1,AGBL5,ADIRF,ACTR3 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Column index:3 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Loading top 10 genes from demo.gene.high.txt: ACRC,AGAP3,ADCK4,AHRR,ABCB8,ADNP,ADCK1,ADRBK1,AFF4,ADRA1A 
-DEBUG @ Sun, 08 Mar 2020 19:00:14: Column index:9 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Running command: rm demo.plow.txt 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Running command: rm demo.phigh.txt 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Running command: rm demo.gene.low.txt 
-INFO  @ Sun, 08 Mar 2020 19:00:14: Running command: rm demo.gene.high.txt 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Parameters: /home/zk/research/liulab-mageck-ef7c39474ed0/mageckmain.py test -k demo/demo1/sample.txt -t HL60.final,KBM7.final -c HL60.initial,KBM7.initial -n demo 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Welcome to MAGeCK v0.5.9.2. Command: test 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Loading count table from demo/demo1/sample.txt  
+INFO  @ Tue, 10 Mar 2020 21:02:08: Processing 1 lines.. 
+DEBUG @ Tue, 10 Mar 2020 21:02:08: Parsing error in line 1 (usually the header line). Skip this line. 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Loaded 999 records. 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Loading R template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template.RTemplate. 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Loading R template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template_indvgene.RTemplate. 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Loading Rnw template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template.Rnw. 
+DEBUG @ Tue, 10 Mar 2020 21:02:08: Setting up the visualization module... 
+DEBUG @ Tue, 10 Mar 2020 21:02:08: Given sample labels: HL60.final,KBM7.final 
+DEBUG @ Tue, 10 Mar 2020 21:02:08: Converted index: 2 3 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Treatment samples:HL60.final,KBM7.final 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Treatment sample index:2,3 
+DEBUG @ Tue, 10 Mar 2020 21:02:08: Given sample labels: HL60.initial,KBM7.initial 
+DEBUG @ Tue, 10 Mar 2020 21:02:08: Converted index: 0 1 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Control samples:HL60.initial,KBM7.initial 
+INFO  @ Tue, 10 Mar 2020 21:02:08: Control sample index:0,1 
+DEBUG @ Tue, 10 Mar 2020 21:02:11: Initial (total) size factor: 1.6666455325878438 2.027372749328462 0.7198064117880387 0.6589869375844738 
