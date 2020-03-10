@@ -38,7 +38,13 @@ def mageckcount_getzerocounts(ctable):
   m=len(ctable) # sgRNAs
   #samplefactor=[0]*n
   zerofactor=[0]*n
+  # 这里是要找0的数量
   for ni in range(n):
+    # 以下这段代码是解读48行的
+    # for (k, v) in ctable.items():
+    #   print(v[ni])
+    #   (lambda x: 1 if x == 0 else 0)(v[ni])
+    # (lambda x: 1 if x==0 else 0)this is a function (v[ni]) this is a argument
     nzr=[ (lambda x: 1 if x==0 else 0)(v[ni]) for (k,v) in ctable.items() ]
     #print(str(sorted(meanfactor)))
     zerofactor[ni]=sum(nzr)
@@ -122,6 +128,7 @@ def normalizeCounts(ctable,sgdict=None,method='median',returnfactor=False,revers
   samplefactor=mageckcount_gettotalnormfactor(ctable_nm)
   logging.debug('Initial (total) size factor: '+' '.join([str(x) for x in samplefactor]))
   nzeros=mageckcount_getzerocounts(ctable_nm)
+  # 0的数量
   if method=='median':
     # calculate the medianfactor
     medianfactor=mageckcount_getmediannormfactor(ctable_nm)
