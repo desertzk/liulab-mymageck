@@ -47,6 +47,7 @@ def modelmeanvar(ctable,method='edger'):
     high_cutoff=m_mean[0]+4*(v_mean[0]**0.5)
   else:
     high_cutoff=max(meanvalue)*2
+  # 这里应该是去掉异常值
   ignore_points=sum([1 for x in meanvalue if x>high_cutoff])
   if ignore_points>0:
     logging.info('Skipping '+str(ignore_points)+' sgRNAs from variance calculation because of their extreme high counts (> 4* STD (mean counts) ).')
@@ -58,6 +59,7 @@ def modelmeanvar(ctable,method='edger'):
     meangood=[meanvalue[i] for i in range(len(meanvalue)) ]
     vargood=[(lambda x: x if x>0.01 else 0.01 )(varvalue[i]-meanvalue[i]) for i in range(len(varvalue)) ]
   # log
+  # 这个就是论文第8页公式3
   meanglog=[math.log(x+1,2) for x in meangood]
   varglog=[math.log(x+1,2) for x in vargood]
   if method=='linear':
@@ -294,6 +296,7 @@ def crispr_test(tab,ctrlg,testg,varg, destfile,sgrna2genelist,args):
         logging.info('Raw variance calculation: '+str(frac_c)+' for control, '+str(frac_t)+' for treatment')
     # adjusted variances
     tabc_var=t_var_mix
+    # 用之前算出来的k b来？？
     t_var_adj=getadjustvar(model,tabc_mean,method='linear')
     if False:
       # the following code is used only if you want to consider raw variances (without regression)
