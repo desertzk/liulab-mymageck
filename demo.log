@@ -1,19 +1,21 @@
-INFO  @ Tue, 10 Mar 2020 21:02:08: Parameters: /home/zk/research/liulab-mageck-ef7c39474ed0/mageckmain.py test -k demo/demo1/sample.txt -t HL60.final,KBM7.final -c HL60.initial,KBM7.initial -n demo 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Welcome to MAGeCK v0.5.9.2. Command: test 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Loading count table from demo/demo1/sample.txt  
-INFO  @ Tue, 10 Mar 2020 21:02:08: Processing 1 lines.. 
-DEBUG @ Tue, 10 Mar 2020 21:02:08: Parsing error in line 1 (usually the header line). Skip this line. 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Loaded 999 records. 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Loading R template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template.RTemplate. 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Loading R template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template_indvgene.RTemplate. 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Loading Rnw template file: /home/zk/research/liulab-mageck-ef7c39474ed0/mageck/plot_template.Rnw. 
-DEBUG @ Tue, 10 Mar 2020 21:02:08: Setting up the visualization module... 
-DEBUG @ Tue, 10 Mar 2020 21:02:08: Given sample labels: HL60.final,KBM7.final 
-DEBUG @ Tue, 10 Mar 2020 21:02:08: Converted index: 2 3 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Treatment samples:HL60.final,KBM7.final 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Treatment sample index:2,3 
-DEBUG @ Tue, 10 Mar 2020 21:02:08: Given sample labels: HL60.initial,KBM7.initial 
-DEBUG @ Tue, 10 Mar 2020 21:02:08: Converted index: 0 1 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Control samples:HL60.initial,KBM7.initial 
-INFO  @ Tue, 10 Mar 2020 21:02:08: Control sample index:0,1 
-DEBUG @ Tue, 10 Mar 2020 21:02:11: Initial (total) size factor: 1.6666455325878438 2.027372749328462 0.7198064117880387 0.6589869375844738 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Parameters: /home/zk/research/liulab-mymageck/mageckmain.py test -k demo/demo1/sample.txt -t HL60.final,KBM7.final -c HL60.initial,KBM7.initial -n demo 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Welcome to MAGeCK v0.5.9.2. Command: test 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Loading count table from demo/demo1/sample.txt  
+INFO  @ Wed, 11 Mar 2020 14:06:21: Processing 1 lines.. 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Parsing error in line 1 (usually the header line). Skip this line. 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Loaded 999 records. 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Loading R template file: /home/zk/research/liulab-mymageck/mageck/plot_template.RTemplate. 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Loading R template file: /home/zk/research/liulab-mymageck/mageck/plot_template_indvgene.RTemplate. 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Loading Rnw template file: /home/zk/research/liulab-mymageck/mageck/plot_template.Rnw. 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Setting up the visualization module... 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Given sample labels: HL60.final,KBM7.final 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Converted index: 2 3 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Treatment samples:HL60.final,KBM7.final 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Treatment sample index:2,3 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Given sample labels: HL60.initial,KBM7.initial 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Converted index: 0 1 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Control samples:HL60.initial,KBM7.initial 
+INFO  @ Wed, 11 Mar 2020 14:06:21: Control sample index:0,1 
+DEBUG @ Wed, 11 Mar 2020 14:06:21: Initial (total) size factor: 1.6666455325878438 2.027372749328462 0.7198064117880387 0.6589869375844738 
+DEBUG @ Wed, 11 Mar 2020 14:07:05: Median factor: 1.469870985815957 1.7759474888175155 0.6308897693810006 0.5721813161032618 
+INFO  @ Wed, 11 Mar 2020 14:07:05: Final size factor: 1.469870985815957 1.7759474888175155 0.6308897693810006 0.5721813161032618 

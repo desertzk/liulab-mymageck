@@ -687,6 +687,7 @@ def magecktest_main(args):
     norm_msg=NormMsgs()
     if hasattr(args,'norm_method'):
       nttab=normalizeCounts(cttab_sel,method=args.norm_method,controlsgfile=args.control_sgrna,norm_msgs=norm_msg)
+      #标准化结束
     else:
       nttab=normalizeCounts(cttab_sel,norm_msgs=norm_msg)
     if norm_msg.haswarning:

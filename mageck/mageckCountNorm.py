@@ -50,13 +50,14 @@ def mageckcount_getzerocounts(ctable):
     zerofactor[ni]=sum(nzr)
   return zerofactor
 
-
+# in paper this is geometric mean
 def mageckcount_getmediannormfactor(ctable):
   """
   Get the factor by median normalization
   """
   n=len(ctable[list(ctable.keys())[0]]) # samples
   m=len(ctable) # sgRNAs
+  # 4组数据的话就是log 四组数据相加然后除以4  但是为什么要用 log？ 因为log相加等于 操作数相乘
   meanval={k:math.exp( (sum( [ math.log(v2+1.0) for v2 in v])*1.0/n) ) for (k,v) in ctable.items() if sum(v)>0}  # geometric mean
   meanval={k:(lambda x: x if x>0 else 1)(v) for (k,v) in meanval.items()} # delete those with all 0 read counts
   #samplefactor=[0]*n
